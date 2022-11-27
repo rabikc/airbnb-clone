@@ -53,6 +53,10 @@ span {
   line-height: 20px;
   font-size: 14px;
   background-color: #fff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .logo-container svg {
@@ -167,7 +171,7 @@ span {
 /******** FILTER SECTION *******/
 
 .filter-section {
-  padding: 1.8rem 0;
+  padding: 1.6rem 0;
 }
 
 .filter-section .filter-container {
@@ -268,6 +272,7 @@ span {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   gap: 1.5rem;
+  row-gap: 2.25rem;
 }
 
 .item-list .item-wrapper {
@@ -385,4 +390,85 @@ span {
 
 .item-wrapper .info-wrapper .price span:first-child {
   font-weight: 600;
+}
+
+/********** PAGE FOOTER *******/
+
+.page-footer {
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--dark-divider-color);
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.page-footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-container .left,
+.footer-container .right {
+  display: flex;
+  gap: 1.2rem;
+  font-weight: 300;
+}
+
+.footer-container .left .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-container .footer-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-container .footer-links a span {
+  height: fit-content;
+  text-align: center;
+}
+
+.footer-container .right button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+.footer-container .right button span {
+  font-weight: 600;
+}
+
+.footer-container .right button span:hover {
+  text-decoration: underline;
+}
+
+.show-map {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.show-map button {
+  background-color: var(--secondary-color);
+  padding: 0.85rem 1.25rem;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 25px;
 }
